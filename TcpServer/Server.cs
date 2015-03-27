@@ -74,6 +74,10 @@ namespace TCPServer
 				}
 				
 				Console.WriteLine("Will send \"" + message + "\" to clients. All was " + all);
+				if (all)
+					SendText (message, clients.ToArray ());
+				else
+					Console.WriteLine ("Not Done Yet");
 			}
 			
 			if(command.ToLower() == "ping")
